@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane stylesheets="@styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.balanpy.Inicio">
+   <center>
+      <VBox alignment="CENTER" fillWidth="false">
+         <children>
+                  <Label contentDisplay="TOP" styleClass="texto_h1" text="Bienvenido a Balanpy">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label contentDisplay="TOP" layoutX="110.0" layoutY="307.0" styleClass="texto_h2" text="Regístrate ahora">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets bottom="50.0" />
+                     </VBox.margin>
+                  </Label>
+            <VBox alignment="TOP_CENTER" fillWidth="false" maxWidth="1.7976931348623157E308" onMouseClicked="#crearUsuario" prefWidth="200.0" styleClass="elegir_mascota">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="imagen_mascotas">
+                     <image>
+                        <Image url="@añadir-usuario-balanpy.png" />
+                     </image>
+                  </ImageView>
+                  <Label onMouseClicked="#crearUsuario" styleClass="texto_h3" text="Añadir Usuario">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </VBox>
+            <GridPane alignment="TOP_CENTER" hgap="20.0" maxWidth="1.7976931348623157E308" prefHeight="80.0" prefWidth="550.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#HandleDone" styleClass="boton_mediano" text="Términos de Uso y Condiciones" textAlignment="CENTER" wrapText="true">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Button>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#HandleDone" styleClass="boton_mediano" text="Acerca de Nosotros" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Button>
+                  <Button layoutX="149.0" layoutY="35.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#HandleDone" styleClass="boton_mediano" text="Manual de Uso" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="50.0" top="80.0" />
+               </VBox.margin>
+            </GridPane>
+               </children>
+      </VBox>
+   </center>
+   <top>
+      <fx:include source="BarraSuperior.fxml" />
+   </top>
+   <bottom>
+      <fx:include source="BarraTareas.fxml" />
+   </bottom>
+</BorderPane>
